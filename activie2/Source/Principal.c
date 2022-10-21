@@ -10,7 +10,7 @@ void CallBack(){
 	//MyGPIO_Toggle(GPIOA,5);
 	result = ConvertChannel(ADC1,3) ;
 }
-
+/*
 int main ( void )
 {
 
@@ -22,11 +22,12 @@ int main ( void )
 	MyADC_Init(ADC1,3);
 	
 	
-/*	MyGPIO_Init(GPIOA,0,7);
+
+MyGPIO_Init(GPIOA,0,7);
 	MyTimer_Base_Init(TIM2,0x6000,0x6000);
 	MyTimer_Base_Start(TIM2);
 	MyTimer_PWM(  TIM2 , 1 );
-	Set_Cycle(TIM2,1,50);*/
+	Set_Cycle(TIM2,1,50);
 	
 
 				do
@@ -35,3 +36,4 @@ int main ( void )
 				}while(1);
 			}
 
+*/

@@ -34,5 +34,3 @@ int ConvertChannel(ADC_TypeDef *ADC, char channel) {
 	while ( (ADC->SR &1<<1) != (1<<1) ) {}
 	return ADC->DR ;
 }
-
-	

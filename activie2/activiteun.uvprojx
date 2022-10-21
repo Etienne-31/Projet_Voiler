@@ -411,6 +411,19 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>New Group</GroupName>
+        </Group>
+        <Group>
+          <GroupName>MyController</GroupName>
+          <Files>
+            <File>
+              <FileName>myController.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\myController.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
         <Group>
@@ -819,6 +832,19 @@
               <FileName>myADC.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\myADC.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>New Group</GroupName>
+        </Group>
+        <Group>
+          <GroupName>MyController</GroupName>
+          <Files>
+            <File>
+              <FileName>myController.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\myController.c</FilePath>
             </File>
           </Files>
         </Group>
