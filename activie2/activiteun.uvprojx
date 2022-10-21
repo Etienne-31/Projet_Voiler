@@ -382,13 +382,6 @@
       <Groups>
         <Group>
           <GroupName>MesSources</GroupName>
-          <Files>
-            <File>
-              <FileName>Principal.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Source\Principal.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>MesDrivers</GroupName>
@@ -407,6 +400,16 @@
               <FileName>myADC.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\myADC.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>OrientationVent</GroupName>
+          <Files>
+            <File>
+              <FileName>OrientationVent.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\OrientationVent.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -794,13 +797,6 @@
       <Groups>
         <Group>
           <GroupName>MesSources</GroupName>
-          <Files>
-            <File>
-              <FileName>Principal.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Source\Principal.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>MesDrivers</GroupName>
@@ -819,6 +815,16 @@
               <FileName>myADC.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\myADC.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>OrientationVent</GroupName>
+          <Files>
+            <File>
+              <FileName>OrientationVent.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\OrientationVent.c</FilePath>
             </File>
           </Files>
         </Group>

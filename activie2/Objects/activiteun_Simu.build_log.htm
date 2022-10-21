@@ -21,32 +21,25 @@ Target DLL:      UL2CM3.DLL V1.163.9.0
 Dialog DLL:      TARMSTM.DLL V1.66.0.0
  
 <h2>Project:</h2>
-U:\Windows\Bureau\4A\Projet_Voilier\activie2\activiteun.uvprojx
-Project File Date:  10/14/2022
+U:\4 IR\ProjetVoilier\Projet_Voilier\activie2\activiteun.uvprojx
+Project File Date:  10/21/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild target 'simu'
+Note: source file '.\Source\OrientationVent.c' - object file renamed from '.\Objects\OrientationVent.o' to '.\Objects\orientationvent_1.o'.
 assembling startup_stm32f10x_md.s...
-compiling myTimer.c...
-..\MesDrivers\Source\myTimer.c(124): error:  #268: declaration may not appear after executable statement in block
-  void TIM3_IRQHandler(void){
-..\MesDrivers\Source\myTimer.c(124): error:  #67: expected a "}"
-  void TIM3_IRQHandler(void){
-..\MesDrivers\Source\myTimer.c: 0 warnings, 2 errors
-compiling myGPIO.c...
-compiling system_stm32f10x.c...
+compiling OrientationVent.c...
 compiling myADC.c...
-..\MesDrivers\Include\myADC.h(7): warning:  #1-D: last line of file ends without a newline
-  #endif
 myADC.c(38): warning:  #1-D: last line of file ends without a newline
   	
-myADC.c: 2 warnings, 0 errors
-compiling Principal.c...
-..\MesDrivers\Include\myADC.h(7): warning:  #1-D: last line of file ends without a newline
-  #endif
-Source\Principal.c: 1 warning, 0 errors
-".\Objects\activiteun_Simu.axf" - 2 Error(s), 3 Warning(s).
+myADC.c: 1 warning, 0 errors
+compiling myGPIO.c...
+compiling system_stm32f10x.c...
+compiling myTimer.c...
+linking...
+Program Size: Code=828 RO-data=268 RW-data=16 ZI-data=1024  
+".\Objects\activiteun_Simu.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -73,11 +66,10 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
-      Include file:  RTE_Driver\Config\RTE_Device.h
       Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
       Source file:   Device\Source\system_stm32f10x.c
-Target not created.
+      Include file:  RTE_Driver\Config\RTE_Device.h
 Build Time Elapsed:  00:00:01
 </pre>
 </body>

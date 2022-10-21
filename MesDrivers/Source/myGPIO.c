@@ -1,11 +1,11 @@
-#define MYGPIO_H
-#include "stm32f10x.h"
+#include "stm32f10x.h" 
+#include "myGPIO.h"
+
 
 
 
 
 void MyGPIO_Init ( GPIO_TypeDef * GPIO, char GPIO_Pin, char GPIO_Conf){
-	char conf_hexa;
 
 	if(GPIO == GPIOA){
 		RCC->APB2ENR |= (0x1 << 2);

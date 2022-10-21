@@ -30,7 +30,7 @@ void MyTimer_Base_Init ( TIM_TypeDef*Timer, unsigned short ARR, unsigned short P
 			
 		}
 		else if(Timer == TIM3){
-			RCC->APB2ENR |=  RCC_APB1ENR_TIM3EN;
+			RCC->APB1ENR |= 1<<1; 
 		}
 		else if(Timer == TIM4){
 			RCC->APB2ENR |= RCC_APB1ENR_TIM4EN ;
@@ -119,7 +119,7 @@ void TIM2_IRQHandler(void){
 						if(Timer2_Interrupt != 0){
 							(*Timer2_Interrupt)();
 						}
-					
+					}				
 void TIM3_IRQHandler(void){
 						TIM3->SR &= ~(1<<0);
 						if(Timer3_Interrupt != 0){
