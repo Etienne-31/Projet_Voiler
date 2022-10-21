@@ -120,7 +120,6 @@ void TIM2_IRQHandler(void){
 							(*Timer2_Interrupt)();
 						}
 					
-}  
 void TIM3_IRQHandler(void){
 						TIM3->SR &= ~(1<<0);
 						if(Timer3_Interrupt != 0){
