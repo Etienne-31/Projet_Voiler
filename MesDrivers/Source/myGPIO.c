@@ -34,15 +34,15 @@ void MyGPIO_Init ( GPIO_TypeDef * GPIO, char GPIO_Pin, char GPIO_Conf){
 				conf_hexa = 0x0;
 				break;
 			case 5 : 
-				conf_hexa = 0x1;
+				conf_hexa = 0x2;
 				break;
 			case 6 :  
 				conf_hexa = 0x6;
 				break;
 			case 7 : 
-				{conf_hexa = 0xb;break;}
+				{conf_hexa = 0xA;break;}
 			case 8 :  
-				conf_hexa = 0x8;
+				conf_hexa = 0xD;
 				break;
 			
 		}
@@ -51,8 +51,8 @@ void MyGPIO_Init ( GPIO_TypeDef * GPIO, char GPIO_Pin, char GPIO_Conf){
 			GPIO->CRL |= (conf_hexa<<GPIO_Pin*4);
 		}
 		else{
-			GPIO->CRH &=  ~(0xF<<GPIO_Pin*4);
-			GPIO->CRH |= (conf_hexa<<GPIO_Pin*4);
+			GPIO->CRH &=  ~(0xF<<(GPIO_Pin-8)*4);
+			GPIO->CRH |= (conf_hexa<<(GPIO_Pin-8)*4);
 		}
 		if(conf_hexa ==  2){
 			GPIO->ODR &= ~(0x1<< GPIO_Pin);

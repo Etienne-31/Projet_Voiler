@@ -12,10 +12,10 @@
 #define In_PullDown 0x8
 #define In_PullUp 0x8 
 #define In_Analog 0x0
-#define Out_Ppull 0x1
+#define Out_Ppull 0x2
 #define Out_OD 0x6 
-#define AltOut_Ppull 0xb
-#define AltOut_OD 
+#define AltOut_Ppull 0xA
+#define AltOut_OD 0xD
 	
 #define In_Floating_Nb 1
 #define In_PullDown_Nb 2

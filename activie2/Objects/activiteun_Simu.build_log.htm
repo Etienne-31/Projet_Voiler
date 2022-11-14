@@ -22,20 +22,21 @@ Dialog DLL:      TARMSTM.DLL V1.66.0.0
  
 <h2>Project:</h2>
 U:\Windows\Bureau\4A\Projet_Voilier\activie2\activiteun.uvprojx
-Project File Date:  10/21/2022
+Project File Date:  10/28/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
-Rebuild target 'simu'
+Rebuild target 'Reel'
 assembling startup_stm32f10x_md.s...
 compiling myGPIO.c...
 compiling myADC.c...
+compiling mycontroldriver.c...
 compiling Principal.c...
+compiling myController.c...
 compiling myTimer.c...
 compiling system_stm32f10x.c...
-compiling myController.c...
 linking...
-Program Size: Code=988 RO-data=268 RW-data=20 ZI-data=1028  
+Program Size: Code=1640 RO-data=268 RW-data=28 ZI-data=1028  
 ".\Objects\activiteun_Simu.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -54,7 +55,7 @@ Package Vendor: Keil
 
 <h2>Collection of Component include folders:</h2>
   .\RTE\Device\STM32F103RB
-  .\RTE\_simu
+  .\RTE\_Reel
   C:\Programdata\Keil\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
   C:\Programdata\Keil\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
 
@@ -65,9 +66,9 @@ Package Vendor: Keil
    * Component: Keil::Device:Startup:1.0.0
       Source file:   Device\Source\ARM\startup_stm32f10x_md.s
       Include file:  RTE_Driver\Config\RTE_Device.h
-      Source file:   Device\Source\system_stm32f10x.c
       Source file:   Device\Source\ARM\STM32F1xx_OPT.s
-Build Time Elapsed:  00:00:01
+      Source file:   Device\Source\system_stm32f10x.c
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

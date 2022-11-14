@@ -408,6 +408,11 @@
               <FileType>1</FileType>
               <FilePath>.\myADC.c</FilePath>
             </File>
+            <File>
+              <FileName>mycontroldriver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\mycontroldriver.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -764,7 +769,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include</IncludePath>
+              <IncludePath>.\Include;..\MesDrivers\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -832,6 +837,11 @@
               <FileName>myADC.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\myADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>mycontroldriver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\mycontroldriver.c</FilePath>
             </File>
           </Files>
         </Group>
