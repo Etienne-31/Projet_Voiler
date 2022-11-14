@@ -382,6 +382,33 @@
       <Groups>
         <Group>
           <GroupName>MesSources</GroupName>
+          <Files>
+            <File>
+              <FileName>myADC.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesDrivers\Include\myADC.h</FilePath>
+            </File>
+            <File>
+              <FileName>myGPIO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesDrivers\Include\myGPIO.h</FilePath>
+            </File>
+            <File>
+              <FileName>myTimer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesDrivers\Include\myTimer.h</FilePath>
+            </File>
+            <File>
+              <FileName>OrientationVent.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesDrivers\Include\OrientationVent.h</FilePath>
+            </File>
+            <File>
+              <FileName>nivBatterie.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesDrivers\Include\nivBatterie.h</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>MesDrivers</GroupName>
@@ -410,6 +437,26 @@
               <FileName>OrientationVent.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\OrientationVent.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Bordage</GroupName>
+          <Files>
+            <File>
+              <FileName>Bordage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Bordage.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>NiveauBatterie</GroupName>
+          <Files>
+            <File>
+              <FileName>nivBatterie.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MesDrivers\Source\nivBatterie.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -797,6 +844,33 @@
       <Groups>
         <Group>
           <GroupName>MesSources</GroupName>
+          <Files>
+            <File>
+              <FileName>myADC.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesDrivers\Include\myADC.h</FilePath>
+            </File>
+            <File>
+              <FileName>myGPIO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesDrivers\Include\myGPIO.h</FilePath>
+            </File>
+            <File>
+              <FileName>myTimer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesDrivers\Include\myTimer.h</FilePath>
+            </File>
+            <File>
+              <FileName>OrientationVent.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesDrivers\Include\OrientationVent.h</FilePath>
+            </File>
+            <File>
+              <FileName>nivBatterie.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesDrivers\Include\nivBatterie.h</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>MesDrivers</GroupName>
@@ -825,6 +899,26 @@
               <FileName>OrientationVent.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\OrientationVent.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Bordage</GroupName>
+          <Files>
+            <File>
+              <FileName>Bordage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Bordage.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>NiveauBatterie</GroupName>
+          <Files>
+            <File>
+              <FileName>nivBatterie.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MesDrivers\Source\nivBatterie.c</FilePath>
             </File>
           </Files>
         </Group>

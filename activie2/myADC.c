@@ -1,17 +1,19 @@
-#include "myADC.h"
+#include "U:\4 IR\ProjetVoilier\Projet_Voilier\MesDrivers\Include\myADC.h"
 #include "stm32f10x.h"
+
 void(*ADC1_Interrupt)(void) = 0;
+
 void MyADC_Init (ADC_TypeDef * ADC, char channel){
 	
+	//Active clock ADC1 et ADC 2
 	if(ADC == ADC1){
-	RCC->APB2ENR |= RCC_APB2ENR_ADC1EN;
-	}
-	else if(ADC == ADC2){
+		RCC->APB2ENR |= RCC_APB2ENR_ADC1EN;
+	}	else if(ADC == ADC2){
 		RCC->APB2ENR |= RCC_APB2ENR_ADC2EN;
 	}
 	
 	
-	ADC->CR2 |= (0x1<<0);
+	ADC->CR2 |= (0x1<<0); //Turn ON ADC  
 	ADC->SQR3|= (channel<<0x0);
 	//ADC->CR2 |= (0x1<<0);
 } 
@@ -29,10 +31,11 @@ void ADC1_2_IRQHandler  (void) {
 	ADC1->SR &= ~(1<<1);
 }
 
-int ConvertChannel(ADC_TypeDef *ADC, char channel) {
+int ConvertChannel(ADC_TypeDef *ADC) {
 	ADC->CR2 |= (0x1<<0);
-	while ( (ADC->SR &1<<1) != (1<<1) ) {}
+	while ( ADC->SR && 1<<1 != (1<<1) ) {}
 	return ADC->DR ;
 }
 
-	
+
+

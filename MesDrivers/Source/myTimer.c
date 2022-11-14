@@ -1,5 +1,5 @@
 #define MYTIMER_H
-#include "myGPIO.h"
+#include "U:\4 IR\ProjetVoilier\Projet_Voilier\MesDrivers\Include\myGPIO.h"
 #include "stm32f10x.h"
 typedef struct
 {
@@ -33,7 +33,7 @@ void MyTimer_Base_Init ( TIM_TypeDef*Timer, unsigned short ARR, unsigned short P
 			RCC->APB1ENR |= 1<<1; 
 		}
 		else if(Timer == TIM4){
-			RCC->APB2ENR |= RCC_APB1ENR_TIM4EN ;
+			RCC->APB1ENR |= RCC_APB1ENR_TIM4EN ;
 		}
 		Timer->PSC = PSC;
 		Timer->ARR = ARR;
@@ -106,10 +106,10 @@ void Set_Cycle(TIM_TypeDef * Timer, char Channel, char Percent){
 }
 
 void TIM1_UP_IRQHandler(void){
-						TIM1->SR &= ~(1<<0);
-						if(Timer1_Interrupt != 0){
-							(*Timer1_Interrupt)();
-						}
+		TIM1->SR &= ~(1<<0);
+		if(Timer1_Interrupt != 0){
+			(*Timer1_Interrupt)();
+		}
 
 					
 }  
