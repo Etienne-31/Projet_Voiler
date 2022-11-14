@@ -8,7 +8,7 @@
 	int alpha1;  
 	int angle_voiles; 
 	
-int main ( void ) { 
+void bordage(void) { 
 	//Configuration du TIM2 
 	unsigned short ARR=65535;	  
 	unsigned short PSC= (72*1000000)/((ARR+1)*50) -1; //FREQUENCE pwm a 50Hz (20ms)

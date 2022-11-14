@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\activiteun_Simu.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\activiteun_Simu.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Fri Oct 28 15:31:12 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Mon Nov 14 16:40:53 2022
 <BR><P>
 <H3>Maximum Stack Usage =         88 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -68,10 +68,10 @@ Function Pointers
  <LI><a href="#[22]">TIM1_BRK_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[25]">TIM1_CC_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[24]">TIM1_TRG_COM_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
- <LI><a href="#[23]">TIM1_UP_IRQHandler</a> from mytimer_1.o(i.TIM1_UP_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
- <LI><a href="#[26]">TIM2_IRQHandler</a> from mytimer_1.o(i.TIM2_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
- <LI><a href="#[27]">TIM3_IRQHandler</a> from mytimer_1.o(i.TIM3_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
- <LI><a href="#[28]">TIM4_IRQHandler</a> from mytimer_1.o(i.TIM4_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
+ <LI><a href="#[23]">TIM1_UP_IRQHandler</a> from mytimer.o(i.TIM1_UP_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
+ <LI><a href="#[26]">TIM2_IRQHandler</a> from mytimer.o(i.TIM2_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
+ <LI><a href="#[27]">TIM3_IRQHandler</a> from mytimer.o(i.TIM3_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
+ <LI><a href="#[28]">TIM4_IRQHandler</a> from mytimer.o(i.TIM4_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[2f]">USART1_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[30]">USART2_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[31]">USART3_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
@@ -393,29 +393,29 @@ Global Symbols
 <P><STRONG><a name="[1c]"></a>ADC1_2_IRQHandler</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, myadc.o(i.ADC1_2_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[4c]"></a>MyGPIO_Init</STRONG> (Thumb, 186 bytes, Stack size 12 bytes, mygpio_1.o(i.MyGPIO_Init))
+<P><STRONG><a name="[4c]"></a>MyGPIO_Init</STRONG> (Thumb, 186 bytes, Stack size 12 bytes, mygpio.o(i.MyGPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = MyGPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[48]"></a>MyTimer_Base_Init</STRONG> (Thumb, 86 bytes, Stack size 8 bytes, mytimer_1.o(i.MyTimer_Base_Init))
+<P><STRONG><a name="[48]"></a>MyTimer_Base_Init</STRONG> (Thumb, 86 bytes, Stack size 8 bytes, mytimer.o(i.MyTimer_Base_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = MyTimer_Base_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;orientation
 </UL>
 
-<P><STRONG><a name="[49]"></a>MyTimer_Base_Start</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, mytimer_1.o(i.MyTimer_Base_Start))
+<P><STRONG><a name="[49]"></a>MyTimer_Base_Start</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, mytimer.o(i.MyTimer_Base_Start))
 <BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;orientation
 </UL>
 
-<P><STRONG><a name="[4b]"></a>MyTimer_PWM</STRONG> (Thumb, 90 bytes, Stack size 0 bytes, mytimer_1.o(i.MyTimer_PWM))
+<P><STRONG><a name="[4b]"></a>MyTimer_PWM</STRONG> (Thumb, 90 bytes, Stack size 0 bytes, mytimer.o(i.MyTimer_PWM))
 <BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[4d]"></a>Set_Cycle</STRONG> (Thumb, 56 bytes, Stack size 12 bytes, mytimer_1.o(i.Set_Cycle))
+<P><STRONG><a name="[4d]"></a>Set_Cycle</STRONG> (Thumb, 56 bytes, Stack size 12 bytes, mytimer.o(i.Set_Cycle))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = Set_Cycle
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -428,22 +428,22 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(.text)
 </UL>
-<P><STRONG><a name="[23]"></a>TIM1_UP_IRQHandler</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, mytimer_1.o(i.TIM1_UP_IRQHandler))
+<P><STRONG><a name="[23]"></a>TIM1_UP_IRQHandler</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, mytimer.o(i.TIM1_UP_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM1_UP_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[26]"></a>TIM2_IRQHandler</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, mytimer_1.o(i.TIM2_IRQHandler))
+<P><STRONG><a name="[26]"></a>TIM2_IRQHandler</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, mytimer.o(i.TIM2_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM2_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[27]"></a>TIM3_IRQHandler</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, mytimer_1.o(i.TIM3_IRQHandler))
+<P><STRONG><a name="[27]"></a>TIM3_IRQHandler</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, mytimer.o(i.TIM3_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM3_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[28]"></a>TIM4_IRQHandler</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, mytimer_1.o(i.TIM4_IRQHandler))
+<P><STRONG><a name="[28]"></a>TIM4_IRQHandler</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, mytimer.o(i.TIM4_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM4_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
@@ -470,7 +470,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[4a]"></a>orientation</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, orientationvent_1.o(i.orientation))
+<P><STRONG><a name="[4a]"></a>orientation</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, orientationvent.o(i.orientation))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = orientation &rArr; MyTimer_Base_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Start

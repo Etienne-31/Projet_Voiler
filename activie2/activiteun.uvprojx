@@ -382,33 +382,6 @@
       <Groups>
         <Group>
           <GroupName>MesSources</GroupName>
-          <Files>
-            <File>
-              <FileName>myADC.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\MesDrivers\Include\myADC.h</FilePath>
-            </File>
-            <File>
-              <FileName>myGPIO.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\MesDrivers\Include\myGPIO.h</FilePath>
-            </File>
-            <File>
-              <FileName>myTimer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\MesDrivers\Include\myTimer.h</FilePath>
-            </File>
-            <File>
-              <FileName>OrientationVent.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\MesDrivers\Include\OrientationVent.h</FilePath>
-            </File>
-            <File>
-              <FileName>nivBatterie.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\MesDrivers\Include\nivBatterie.h</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>MesDrivers</GroupName>
@@ -801,7 +774,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include</IncludePath>
+              <IncludePath>.\Include;..\MesDrivers\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -844,33 +817,6 @@
       <Groups>
         <Group>
           <GroupName>MesSources</GroupName>
-          <Files>
-            <File>
-              <FileName>myADC.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\MesDrivers\Include\myADC.h</FilePath>
-            </File>
-            <File>
-              <FileName>myGPIO.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\MesDrivers\Include\myGPIO.h</FilePath>
-            </File>
-            <File>
-              <FileName>myTimer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\MesDrivers\Include\myTimer.h</FilePath>
-            </File>
-            <File>
-              <FileName>OrientationVent.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\MesDrivers\Include\OrientationVent.h</FilePath>
-            </File>
-            <File>
-              <FileName>nivBatterie.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\MesDrivers\Include\nivBatterie.h</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>MesDrivers</GroupName>
