@@ -3,18 +3,18 @@
 #include "stm32f10x.h"
 typedef struct
 {
-	TIM_TypeDef * Timer ; // TIM1 à TIM4
+	TIM_TypeDef * Timer ; // TIM1 Ã  TIM4
 	unsigned short ARR ;
 	unsigned short PSC ;
 } MyTimer_Struct_TypeDef ;
 /*
 *****************************************************************************************
 * @brie f
-* @param -> Paramè t r e sous forme d ’ une s t r u c t u r e ( son a d re s se ) con ten an t l e s
+* @param -> ParamÃ¨ t r e sous forme d â€™ une s t r u c t u r e ( son a d re s se ) con ten an t l e s
 i n f o rm a ti o n s de base
-* @Note -> F onc ti on à l a n c e r s y s t ématiquement avan t d ’ a l l e r pl u s en dé t a i l dans l e s
+* @Note -> F onc ti on Ã  l a n c e r s y s t Ã©matiquement avan t d â€™ a l l e r pl u s en dÃ© t a i l dans l e s
 con f pl u s f i n e s (PWM, codeur i n c . . . )
-*************************************************************************************************
+***************a**********************************************************************************
 */
 void MyTimer_Base_Init ( TIM_TypeDef*Timer, unsigned short ARR, unsigned short PSC ) ;
 void MyTimer_Base_Start (TIM_TypeDef*Timer) ;

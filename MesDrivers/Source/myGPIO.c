@@ -5,6 +5,7 @@
 
 
 void MyGPIO_Init ( GPIO_TypeDef * GPIO, char GPIO_Pin, char GPIO_Conf){
+
 		char conf_hexa;
 		
 		if(GPIO == GPIOA){
@@ -61,7 +62,6 @@ void MyGPIO_Init ( GPIO_TypeDef * GPIO, char GPIO_Pin, char GPIO_Conf){
 			GPIO->ODR |= (0x1<< GPIO_Pin);
 		}	
 	return;
-}
 
 
 
@@ -72,12 +72,10 @@ int MyGPIO_Read ( GPIO_TypeDef * GPIO , char GPIO_Pin ){
 
 void MyGPIO_Set ( GPIO_TypeDef * GPIO , char GPIO_Pin ){
 	GPIO->BSRR = (1<<GPIO_Pin); 
-	return;
 }
 
 void MyGPIO_Reset ( GPIO_TypeDef * GPIO , char GPIO_Pin ){
 	GPIO->BRR = (1<<GPIO_Pin); 
-	return;
 }
 
 void MyGPIO_Toggle ( GPIO_TypeDef * GPIO , char GPIO_Pin ){

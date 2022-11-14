@@ -2,6 +2,7 @@
 #define MYGPIO_H
 #include "stm32f10x.h"
 
+
 	typedef struct{
 		GPIO_TypeDef * GPIO ;
 		char GPIO_Pin ; //numero de 0 a 15
@@ -25,6 +26,7 @@
 #define Out_OD_Nb 6
 #define AltOut_Ppull_Nb 7
 #define AltOut_OD_Nb 8
+
 	
 void MyGPIO_Init (GPIO_TypeDef * GPIO, char GPIO_Pin, char GPIO_Conf) ;
 int MyGPIO_Read ( GPIO_TypeDef * GPIO , char GPIO_Pin ) ; // renvoie 0 ou autre chose different de 0
