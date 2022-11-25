@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include;..\MesDrivers\Include</IncludePath>
+              <IncludePath>.\Include;..\MesDrivers\Include;..\..\Lib_Com_Periph_2022</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -382,56 +382,32 @@
       <Groups>
         <Group>
           <GroupName>MesSources</GroupName>
+          <Files>
+            <File>
+              <FileName>Principal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Principal.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>MesDrivers</GroupName>
           <Files>
             <File>
-              <FileName>myGPIO.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\myGPIO.c</FilePath>
-            </File>
-            <File>
-              <FileName>myTimer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\myTimer.c</FilePath>
-            </File>
-            <File>
-              <FileName>myADC.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\myADC.c</FilePath>
+              <FileName>Lib_Com_Periph_2022.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\..\Lib_Com_Periph_2022\Lib_Com_Periph_2022.lib</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
           <GroupName>OrientationVent</GroupName>
-          <Files>
-            <File>
-              <FileName>OrientationVent.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Source\OrientationVent.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>Bordage</GroupName>
-          <Files>
-            <File>
-              <FileName>Bordage.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Source\Bordage.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>NiveauBatterie</GroupName>
-          <Files>
-            <File>
-              <FileName>nivBatterie.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\nivBatterie.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>
@@ -774,7 +750,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include;..\MesDrivers\Include</IncludePath>
+              <IncludePath>.\Include;..\MesDrivers\Include;..\..\Lib_Com_Periph_2022</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -817,56 +793,32 @@
       <Groups>
         <Group>
           <GroupName>MesSources</GroupName>
+          <Files>
+            <File>
+              <FileName>Principal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Principal.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>MesDrivers</GroupName>
           <Files>
             <File>
-              <FileName>myGPIO.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\myGPIO.c</FilePath>
-            </File>
-            <File>
-              <FileName>myTimer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\myTimer.c</FilePath>
-            </File>
-            <File>
-              <FileName>myADC.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\myADC.c</FilePath>
+              <FileName>Lib_Com_Periph_2022.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\..\Lib_Com_Periph_2022\Lib_Com_Periph_2022.lib</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
           <GroupName>OrientationVent</GroupName>
-          <Files>
-            <File>
-              <FileName>OrientationVent.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Source\OrientationVent.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>Bordage</GroupName>
-          <Files>
-            <File>
-              <FileName>Bordage.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Source\Bordage.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>NiveauBatterie</GroupName>
-          <Files>
-            <File>
-              <FileName>nivBatterie.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\nivBatterie.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>

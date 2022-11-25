@@ -1,10 +1,6 @@
 --cpu Cortex-M3
-".\objects\mygpio.o"
-".\objects\mytimer.o"
-".\objects\myadc.o"
-".\objects\orientationvent.o"
-".\objects\bordage.o"
-".\objects\nivbatterie.o"
+".\objects\principal.o"
+"..\..\Lib_Com_Periph_2022\Lib_Com_Periph_2022.lib"
 ".\objects\startup_stm32f10x_md.o"
 ".\objects\system_stm32f10x.o"
 --library_type=microlib --strict --scatter ".\Objects\activiteun_Simu.sct"
