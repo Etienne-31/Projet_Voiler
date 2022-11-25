@@ -22,21 +22,14 @@ void flag(){ // Renomer en fonction lire USART  DATA REGISTER
 	
 }
 
-/*uint8_t UART3_Getchar(void){
-	uint8_t Temp;
-	while ((USART3->SR & (1<<5)) != 1 <<5);//attendre que rxne soit mis a 1 pour voir s'il est pret a recevoir 
-	Temp= USART3->DR; //read data 
 
-	USART3->SR &=  ~(1<<5);
-	return Temp;
-}*/
 
 //char toto ;
 
 int main ( void )
 {
 	//init usart
-	MyGPIO_Init ( GPIOB, 11,1);//  USART  input pull up // Pourquoi cette pin la ? 
+	MyGPIO_Init ( GPIOB, 11,1);//  USART  input pull up
 	MyUsart_Base_Init (USART3) ;
 	//init gpio sens 
 	MyGPIO_Init (GPIOA, 8, 5);//output bit sens
@@ -54,14 +47,4 @@ int main ( void )
 			}
 		
 
-	/*RCC->APB1ENR |=  RCC_APB1ENR_USART3EN ;//(1<<18);
-	USART3->CR1 = 0x00; //clear all
-	USART3->CR1 |= (1<<13); //UE=1 enable usart
-	USART3->BRR = (227<<4) | (14<<0);// mantisse 227 et fraction 14 
-	USART3->CR1 |= (1<<2); // RE=1 enable receiver 
-
-	while (1) {
-		toto=UART3_Getchar();
-	}
-//mettre une interruption au lieu de while pour quand on recoit un truc on le met dans data et abaisser le flag*/
-
+	
