@@ -41,7 +41,7 @@ void MyGPIO_Init ( GPIO_TypeDef * GPIO, char GPIO_Pin, char GPIO_Conf){
 
 
 int MyGPIO_Read ( GPIO_TypeDef * GPIO , char GPIO_Pin ){
-	return ((GPIO->IDR & (0x01<<GPIO_Pin))== 0 );
+	return ((GPIO->IDR & (0x1<<GPIO_Pin))== (0x1<<GPIO_Pin) );
 }
 
 

@@ -382,6 +382,13 @@
       <Groups>
         <Group>
           <GroupName>MesSources</GroupName>
+          <Files>
+            <File>
+              <FileName>Principal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Principal.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>MesDrivers</GroupName>
@@ -430,6 +437,16 @@
               <FileName>nivBatterie.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MesDrivers\Source\nivBatterie.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>mycontroldriver</GroupName>
+          <Files>
+            <File>
+              <FileName>mycontroldriver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\mycontroldriver.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -817,6 +834,13 @@
       <Groups>
         <Group>
           <GroupName>MesSources</GroupName>
+          <Files>
+            <File>
+              <FileName>Principal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Principal.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>MesDrivers</GroupName>
@@ -865,6 +889,16 @@
               <FileName>nivBatterie.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MesDrivers\Source\nivBatterie.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>mycontroldriver</GroupName>
+          <Files>
+            <File>
+              <FileName>mycontroldriver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\mycontroldriver.c</FilePath>
             </File>
           </Files>
         </Group>

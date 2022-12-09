@@ -4,6 +4,19 @@ Component: ARM Compiler 5.06 update 7 (build 960) Tool: armlink [4d3601]
 
 Section Cross References
 
+    principal.o(i.handler) refers to bordage.o(i.bordage) for bordage
+    principal.o(i.handler) refers to nivbatterie.o(i.callBack_Batterie) for callBack_Batterie
+    principal.o(i.handler) refers to mycontroldriver.o(i.setPuissance) for setPuissance
+    principal.o(i.handler) refers to principal.o(.data) for cpt
+    principal.o(i.main) refers to mycontroldriver.o(i.MyUsart_Base_Init) for MyUsart_Base_Init
+    principal.o(i.main) refers to mycontroldriver.o(i.MyUsart_Active_IT) for MyUsart_Active_IT
+    principal.o(i.main) refers to nivbatterie.o(i.niveauBatterie) for niveauBatterie
+    principal.o(i.main) refers to bordage.o(i.init_bordage) for init_bordage
+    principal.o(i.main) refers to mytimer.o(i.MyTimer_Base_Init) for MyTimer_Base_Init
+    principal.o(i.main) refers to mytimer.o(i.MyTimer_Base_Start) for MyTimer_Base_Start
+    principal.o(i.main) refers to mytimer.o(i.MyTimer_Active_IT) for MyTimer_Active_IT
+    principal.o(i.main) refers to mycontroldriver.o(i.getPuissance) for getPuissance
+    principal.o(i.main) refers to principal.o(i.handler) for handler
     mygpio.o(i.MyGPIO_Toggle) refers to mygpio.o(i.MyGPIO_Read) for MyGPIO_Read
     mygpio.o(i.MyGPIO_Toggle) refers to mygpio.o(i.MyGPIO_Set) for MyGPIO_Set
     mygpio.o(i.MyGPIO_Toggle) refers to mygpio.o(i.MyGPIO_Reset) for MyGPIO_Reset
@@ -15,22 +28,34 @@ Section Cross References
     myadc.o(i.MyADC_Active_IT) refers to myadc.o(.data) for ADC1_Interrupt
     orientationvent.o(i.orientation) refers to mytimer.o(i.MyTimer_Base_Init) for MyTimer_Base_Init
     orientationvent.o(i.orientation) refers to mytimer.o(i.MyTimer_Base_Start) for MyTimer_Base_Start
-    bordage.o(i.main) refers to mytimer.o(i.MyTimer_Base_Init) for MyTimer_Base_Init
-    bordage.o(i.main) refers to mytimer.o(i.MyTimer_Base_Start) for MyTimer_Base_Start
-    bordage.o(i.main) refers to orientationvent.o(i.orientation) for orientation
-    bordage.o(i.main) refers to mytimer.o(i.MyTimer_PWM) for MyTimer_PWM
-    bordage.o(i.main) refers to mygpio.o(i.MyGPIO_Init) for MyGPIO_Init
-    bordage.o(i.main) refers to dflti.o(.text) for __aeabi_i2d
-    bordage.o(i.main) refers to dmul.o(.text) for __aeabi_dmul
-    bordage.o(i.main) refers to dadd.o(.text) for __aeabi_dadd
-    bordage.o(i.main) refers to dfixi.o(.text) for __aeabi_d2iz
-    bordage.o(i.main) refers to mytimer.o(i.Set_Cycle) for Set_Cycle
-    bordage.o(i.main) refers to bordage.o(.data) for alpha
-    nivbatterie.o(i.CallBack) refers to myadc.o(i.ConvertChannel) for ConvertChannel
-    nivbatterie.o(i.CallBack) refers to nivbatterie.o(.data) for res
-    nivbatterie.o(i.niveau) refers to myadc.o(i.MyADC_Init) for MyADC_Init
-    nivbatterie.o(i.niveau) refers to myadc.o(i.MyADC_Active_IT) for MyADC_Active_IT
-    nivbatterie.o(i.niveau) refers to nivbatterie.o(i.CallBack) for CallBack
+    orientationvent.o(i.orientation) refers to mygpio.o(i.MyGPIO_Init) for MyGPIO_Init
+    orientationvent.o(i.orientation) refers to mygpio.o(i.MyGPIO_Read) for MyGPIO_Read
+    bordage.o(i.bordage) refers to mytimer.o(i.MyTimer_PWM) for MyTimer_PWM
+    bordage.o(i.bordage) refers to mygpio.o(i.MyGPIO_Init) for MyGPIO_Init
+    bordage.o(i.bordage) refers to dflti.o(.text) for __aeabi_i2d
+    bordage.o(i.bordage) refers to dmul.o(.text) for __aeabi_dmul
+    bordage.o(i.bordage) refers to dadd.o(.text) for __aeabi_dadd
+    bordage.o(i.bordage) refers to dfixi.o(.text) for __aeabi_d2iz
+    bordage.o(i.bordage) refers to mytimer.o(i.Set_Cycle) for Set_Cycle
+    bordage.o(i.bordage) refers to bordage.o(.data) for alpha
+    bordage.o(i.init_bordage) refers to mytimer.o(i.MyTimer_Base_Init) for MyTimer_Base_Init
+    bordage.o(i.init_bordage) refers to mytimer.o(i.MyTimer_Base_Start) for MyTimer_Base_Start
+    bordage.o(i.init_bordage) refers to orientationvent.o(i.orientation) for orientation
+    nivbatterie.o(i.callBack_Batterie) refers to myadc.o(i.ConvertChannel) for ConvertChannel
+    nivbatterie.o(i.callBack_Batterie) refers to nivbatterie.o(.data) for res
+    nivbatterie.o(i.niveauBatterie) refers to myadc.o(i.MyADC_Init) for MyADC_Init
+    mycontroldriver.o(i.MyUsart_Active_IT) refers to mytimer.o(i.MyTimer_Base_Init) for MyTimer_Base_Init
+    mycontroldriver.o(i.MyUsart_Active_IT) refers to mytimer.o(i.MyTimer_Base_Start) for MyTimer_Base_Start
+    mycontroldriver.o(i.MyUsart_Active_IT) refers to mytimer.o(i.MyTimer_PWM) for MyTimer_PWM
+    mycontroldriver.o(i.MyUsart_Active_IT) refers to mycontroldriver.o(.data) for Usart3_Interrupt
+    mycontroldriver.o(i.MyUsart_Base_Init) refers to mygpio.o(i.MyGPIO_Init) for MyGPIO_Init
+    mycontroldriver.o(i.USART1_IRQHandler) refers to mycontroldriver.o(.data) for Usart1_Interrupt
+    mycontroldriver.o(i.USART3_IRQHandler) refers to mycontroldriver.o(.data) for Usart3_Interrupt
+    mycontroldriver.o(i.getPuissance) refers to mycontroldriver.o(.data) for puissance
+    mycontroldriver.o(i.setPuissance) refers to mytimer.o(i.Set_Cycle) for Set_Cycle
+    mycontroldriver.o(i.setPuissance) refers to mygpio.o(i.MyGPIO_Set) for MyGPIO_Set
+    mycontroldriver.o(i.setPuissance) refers to mygpio.o(i.MyGPIO_Reset) for MyGPIO_Reset
+    mycontroldriver.o(i.setPuissance) refers to mycontroldriver.o(.data) for puissance
     startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
     startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(.text) for Reset_Handler
     startup_stm32f10x_md.o(RESET) refers to myadc.o(i.ADC1_2_IRQHandler) for ADC1_2_IRQHandler
@@ -38,6 +63,8 @@ Section Cross References
     startup_stm32f10x_md.o(RESET) refers to mytimer.o(i.TIM2_IRQHandler) for TIM2_IRQHandler
     startup_stm32f10x_md.o(RESET) refers to mytimer.o(i.TIM3_IRQHandler) for TIM3_IRQHandler
     startup_stm32f10x_md.o(RESET) refers to mytimer.o(i.TIM4_IRQHandler) for TIM4_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to mycontroldriver.o(i.USART1_IRQHandler) for USART1_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to mycontroldriver.o(i.USART3_IRQHandler) for USART3_IRQHandler
     startup_stm32f10x_md.o(.text) refers to system_stm32f10x.o(i.SystemInit) for SystemInit
     startup_stm32f10x_md.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
     system_stm32f10x.o(i.SetSysClock) refers to system_stm32f10x.o(i.SetSysClockTo72) for SetSysClockTo72
@@ -66,8 +93,8 @@ Section Cross References
     entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
     entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
     entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
-    entry9a.o(.ARM.Collect$$$$0000000B) refers to bordage.o(i.main) for main
-    entry9b.o(.ARM.Collect$$$$0000000C) refers to bordage.o(i.main) for main
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to principal.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to principal.o(i.main) for main
     depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
     depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
     init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
@@ -77,24 +104,21 @@ Section Cross References
 
 Removing Unused input sections from the image.
 
+    Removing principal.o(.rev16_text), (4 bytes).
+    Removing principal.o(.revsh_text), (4 bytes).
+    Removing principal.o(.rrx_text), (6 bytes).
     Removing mygpio.o(.rev16_text), (4 bytes).
     Removing mygpio.o(.revsh_text), (4 bytes).
     Removing mygpio.o(.rrx_text), (6 bytes).
-    Removing mygpio.o(i.MyGPIO_Read), (20 bytes).
-    Removing mygpio.o(i.MyGPIO_Reset), (8 bytes).
-    Removing mygpio.o(i.MyGPIO_Set), (8 bytes).
     Removing mygpio.o(i.MyGPIO_Toggle), (36 bytes).
     Removing mytimer.o(.rev16_text), (4 bytes).
     Removing mytimer.o(.revsh_text), (4 bytes).
     Removing mytimer.o(.rrx_text), (6 bytes).
-    Removing mytimer.o(i.MyTimer_Active_IT), (196 bytes).
     Removing mytimer.o(i.MyTimer_Base_Stop), (10 bytes).
     Removing myadc.o(.rev16_text), (4 bytes).
     Removing myadc.o(.revsh_text), (4 bytes).
     Removing myadc.o(.rrx_text), (6 bytes).
-    Removing myadc.o(i.ConvertChannel), (22 bytes).
     Removing myadc.o(i.MyADC_Active_IT), (52 bytes).
-    Removing myadc.o(i.MyADC_Init), (68 bytes).
     Removing myadc.o(.data), (4 bytes).
     Removing orientationvent.o(.rev16_text), (4 bytes).
     Removing orientationvent.o(.revsh_text), (4 bytes).
@@ -105,9 +129,9 @@ Removing Unused input sections from the image.
     Removing nivbatterie.o(.rev16_text), (4 bytes).
     Removing nivbatterie.o(.revsh_text), (4 bytes).
     Removing nivbatterie.o(.rrx_text), (6 bytes).
-    Removing nivbatterie.o(i.CallBack), (24 bytes).
-    Removing nivbatterie.o(i.niveau), (32 bytes).
-    Removing nivbatterie.o(.data), (4 bytes).
+    Removing mycontroldriver.o(.rev16_text), (4 bytes).
+    Removing mycontroldriver.o(.revsh_text), (4 bytes).
+    Removing mycontroldriver.o(.rrx_text), (6 bytes).
     Removing startup_stm32f10x_md.o(HEAP), (512 bytes).
     Removing system_stm32f10x.o(.rev16_text), (4 bytes).
     Removing system_stm32f10x.o(.revsh_text), (4 bytes).
@@ -115,7 +139,7 @@ Removing Unused input sections from the image.
     Removing system_stm32f10x.o(i.SystemCoreClockUpdate), (164 bytes).
     Removing system_stm32f10x.o(.data), (20 bytes).
 
-37 unused section(s) (total 1278 bytes) removed from the image.
+34 unused section(s) (total 924 bytes) removed from the image.
 
 ==============================================================================
 
@@ -125,24 +149,24 @@ Image Symbol Table
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
     ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
     ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
@@ -160,8 +184,12 @@ Image Symbol Table
     RTE\\Device\\STM32F103RB\\system_stm32f10x.c 0x00000000   Number         0  system_stm32f10x.o ABSOLUTE
     Source\Bordage.c                         0x00000000   Number         0  bordage.o ABSOLUTE
     Source\OrientationVent.c                 0x00000000   Number         0  orientationvent.o ABSOLUTE
+    Source\Principal.c                       0x00000000   Number         0  principal.o ABSOLUTE
     Source\\Bordage.c                        0x00000000   Number         0  bordage.o ABSOLUTE
     Source\\OrientationVent.c                0x00000000   Number         0  orientationvent.o ABSOLUTE
+    Source\\Principal.c                      0x00000000   Number         0  principal.o ABSOLUTE
+    Source\\mycontroldriver.c                0x00000000   Number         0  mycontroldriver.o ABSOLUTE
+    Source\mycontroldriver.c                 0x00000000   Number         0  mycontroldriver.o ABSOLUTE
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
     handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
     init.s                                   0x00000000   Number         0  init.o ABSOLUTE
@@ -191,35 +219,55 @@ Image Symbol Table
     .text                                    0x0800041c   Section        0  depilogue.o(.text)
     .text                                    0x080004d8   Section       36  init.o(.text)
     i.ADC1_2_IRQHandler                      0x080004fc   Section        0  myadc.o(i.ADC1_2_IRQHandler)
-    i.MyGPIO_Init                            0x08000510   Section        0  mygpio.o(i.MyGPIO_Init)
-    i.MyTimer_Base_Init                      0x080005e0   Section        0  mytimer.o(i.MyTimer_Base_Init)
-    i.MyTimer_Base_Start                     0x08000648   Section        0  mytimer.o(i.MyTimer_Base_Start)
-    i.MyTimer_PWM                            0x08000652   Section        0  mytimer.o(i.MyTimer_PWM)
-    i.SetSysClock                            0x080006ac   Section        0  system_stm32f10x.o(i.SetSysClock)
-    SetSysClock                              0x080006ad   Thumb Code     8  system_stm32f10x.o(i.SetSysClock)
-    i.SetSysClockTo72                        0x080006b4   Section        0  system_stm32f10x.o(i.SetSysClockTo72)
-    SetSysClockTo72                          0x080006b5   Thumb Code   214  system_stm32f10x.o(i.SetSysClockTo72)
-    i.Set_Cycle                              0x08000794   Section        0  mytimer.o(i.Set_Cycle)
-    i.SystemInit                             0x080007cc   Section        0  system_stm32f10x.o(i.SystemInit)
-    i.TIM1_UP_IRQHandler                     0x0800082c   Section        0  mytimer.o(i.TIM1_UP_IRQHandler)
-    i.TIM2_IRQHandler                        0x08000850   Section        0  mytimer.o(i.TIM2_IRQHandler)
-    i.TIM3_IRQHandler                        0x08000874   Section        0  mytimer.o(i.TIM3_IRQHandler)
-    i.TIM4_IRQHandler                        0x08000898   Section        0  mytimer.o(i.TIM4_IRQHandler)
-    i.__scatterload_copy                     0x080008bc   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x080008ca   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x080008cc   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.main                                   0x080008dc   Section        0  bordage.o(i.main)
-    i.orientation                            0x080009c0   Section        0  orientationvent.o(i.orientation)
-    .data                                    0x20000000   Section       16  mytimer.o(.data)
-    .data                                    0x20000010   Section       12  bordage.o(.data)
-    STACK                                    0x20000020   Section     1024  startup_stm32f10x_md.o(STACK)
+    i.ConvertChannel                         0x08000510   Section        0  myadc.o(i.ConvertChannel)
+    i.MyADC_Init                             0x08000520   Section        0  myadc.o(i.MyADC_Init)
+    i.MyGPIO_Init                            0x0800054c   Section        0  mygpio.o(i.MyGPIO_Init)
+    i.MyGPIO_Read                            0x0800061c   Section        0  mygpio.o(i.MyGPIO_Read)
+    i.MyGPIO_Reset                           0x08000636   Section        0  mygpio.o(i.MyGPIO_Reset)
+    i.MyGPIO_Set                             0x0800063e   Section        0  mygpio.o(i.MyGPIO_Set)
+    i.MyTimer_Active_IT                      0x08000648   Section        0  mytimer.o(i.MyTimer_Active_IT)
+    i.MyTimer_Base_Init                      0x0800070c   Section        0  mytimer.o(i.MyTimer_Base_Init)
+    i.MyTimer_Base_Start                     0x08000774   Section        0  mytimer.o(i.MyTimer_Base_Start)
+    i.MyTimer_PWM                            0x0800077e   Section        0  mytimer.o(i.MyTimer_PWM)
+    i.MyUsart_Active_IT                      0x080007d8   Section        0  mycontroldriver.o(i.MyUsart_Active_IT)
+    i.MyUsart_Base_Init                      0x0800087c   Section        0  mycontroldriver.o(i.MyUsart_Base_Init)
+    i.SetSysClock                            0x08000928   Section        0  system_stm32f10x.o(i.SetSysClock)
+    SetSysClock                              0x08000929   Thumb Code     8  system_stm32f10x.o(i.SetSysClock)
+    i.SetSysClockTo72                        0x08000930   Section        0  system_stm32f10x.o(i.SetSysClockTo72)
+    SetSysClockTo72                          0x08000931   Thumb Code   214  system_stm32f10x.o(i.SetSysClockTo72)
+    i.Set_Cycle                              0x08000a10   Section        0  mytimer.o(i.Set_Cycle)
+    i.SystemInit                             0x08000a48   Section        0  system_stm32f10x.o(i.SystemInit)
+    i.TIM1_UP_IRQHandler                     0x08000aa8   Section        0  mytimer.o(i.TIM1_UP_IRQHandler)
+    i.TIM2_IRQHandler                        0x08000acc   Section        0  mytimer.o(i.TIM2_IRQHandler)
+    i.TIM3_IRQHandler                        0x08000af0   Section        0  mytimer.o(i.TIM3_IRQHandler)
+    i.TIM4_IRQHandler                        0x08000b14   Section        0  mytimer.o(i.TIM4_IRQHandler)
+    i.USART1_IRQHandler                      0x08000b38   Section        0  mycontroldriver.o(i.USART1_IRQHandler)
+    i.USART3_IRQHandler                      0x08000b5c   Section        0  mycontroldriver.o(i.USART3_IRQHandler)
+    i.__scatterload_copy                     0x08000b80   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08000b8e   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08000b90   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.bordage                                0x08000ba0   Section        0  bordage.o(i.bordage)
+    i.callBack_Batterie                      0x08000c50   Section        0  nivbatterie.o(i.callBack_Batterie)
+    i.getPuissance                           0x08000c68   Section        0  mycontroldriver.o(i.getPuissance)
+    i.handler                                0x08000c7c   Section        0  principal.o(i.handler)
+    i.init_bordage                           0x08000ca8   Section        0  bordage.o(i.init_bordage)
+    i.main                                   0x08000cec   Section        0  principal.o(i.main)
+    i.niveauBatterie                         0x08000d48   Section        0  nivbatterie.o(i.niveauBatterie)
+    i.orientation                            0x08000d58   Section        0  orientationvent.o(i.orientation)
+    i.setPuissance                           0x08000dd4   Section        0  mycontroldriver.o(i.setPuissance)
+    .data                                    0x20000000   Section        4  principal.o(.data)
+    .data                                    0x20000004   Section       16  mytimer.o(.data)
+    .data                                    0x20000014   Section       12  bordage.o(.data)
+    .data                                    0x20000020   Section        4  nivbatterie.o(.data)
+    .data                                    0x20000024   Section       12  mycontroldriver.o(.data)
+    STACK                                    0x20000030   Section     1024  startup_stm32f10x_md.o(STACK)
 
     Global Symbols
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
     BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
-    __ARM_use_no_argv                        0x00000000   Number         0  bordage.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  principal.o ABSOLUTE
     __arm_fini_                               - Undefined Weak Reference
     __cpp_initialize__aeabi_                  - Undefined Weak Reference
     __cxa_finalize                            - Undefined Weak Reference
@@ -280,9 +328,7 @@ Image Symbol Table
     TIM1_BRK_IRQHandler                      0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
     TIM1_CC_IRQHandler                       0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
     TIM1_TRG_COM_IRQHandler                  0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
-    USART1_IRQHandler                        0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
     USART2_IRQHandler                        0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
-    USART3_IRQHandler                        0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
     USBWakeUp_IRQHandler                     0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
     USB_HP_CAN1_TX_IRQHandler                0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
     USB_LP_CAN1_RX0_IRQHandler               0x0800011f   Thumb Code     0  startup_stm32f10x_md.o(.text)
@@ -305,31 +351,53 @@ Image Symbol Table
     __scatterload                            0x080004d9   Thumb Code    28  init.o(.text)
     __scatterload_rt2                        0x080004d9   Thumb Code     0  init.o(.text)
     ADC1_2_IRQHandler                        0x080004fd   Thumb Code    14  myadc.o(i.ADC1_2_IRQHandler)
-    MyGPIO_Init                              0x08000511   Thumb Code   186  mygpio.o(i.MyGPIO_Init)
-    MyTimer_Base_Init                        0x080005e1   Thumb Code    86  mytimer.o(i.MyTimer_Base_Init)
-    MyTimer_Base_Start                       0x08000649   Thumb Code    10  mytimer.o(i.MyTimer_Base_Start)
-    MyTimer_PWM                              0x08000653   Thumb Code    90  mytimer.o(i.MyTimer_PWM)
-    Set_Cycle                                0x08000795   Thumb Code    56  mytimer.o(i.Set_Cycle)
-    SystemInit                               0x080007cd   Thumb Code    78  system_stm32f10x.o(i.SystemInit)
-    TIM1_UP_IRQHandler                       0x0800082d   Thumb Code    28  mytimer.o(i.TIM1_UP_IRQHandler)
-    TIM2_IRQHandler                          0x08000851   Thumb Code    32  mytimer.o(i.TIM2_IRQHandler)
-    TIM3_IRQHandler                          0x08000875   Thumb Code    28  mytimer.o(i.TIM3_IRQHandler)
-    TIM4_IRQHandler                          0x08000899   Thumb Code    28  mytimer.o(i.TIM4_IRQHandler)
-    __scatterload_copy                       0x080008bd   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x080008cb   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x080008cd   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    main                                     0x080008dd   Thumb Code   182  bordage.o(i.main)
-    orientation                              0x080009c1   Thumb Code    84  orientationvent.o(i.orientation)
-    Region$$Table$$Base                      0x08000a18   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08000a38   Number         0  anon$$obj.o(Region$$Table)
-    Timer1_Interrupt                         0x20000000   Data           4  mytimer.o(.data)
-    Timer2_Interrupt                         0x20000004   Data           4  mytimer.o(.data)
-    Timer3_Interrupt                         0x20000008   Data           4  mytimer.o(.data)
-    Timer4_Interrupt                         0x2000000c   Data           4  mytimer.o(.data)
-    alpha                                    0x20000010   Data           4  bordage.o(.data)
-    alpha1                                   0x20000014   Data           4  bordage.o(.data)
-    angle_voiles                             0x20000018   Data           4  bordage.o(.data)
-    __initial_sp                             0x20000420   Data           0  startup_stm32f10x_md.o(STACK)
+    ConvertChannel                           0x08000511   Thumb Code    14  myadc.o(i.ConvertChannel)
+    MyADC_Init                               0x08000521   Thumb Code    38  myadc.o(i.MyADC_Init)
+    MyGPIO_Init                              0x0800054d   Thumb Code   186  mygpio.o(i.MyGPIO_Init)
+    MyGPIO_Read                              0x0800061d   Thumb Code    26  mygpio.o(i.MyGPIO_Read)
+    MyGPIO_Reset                             0x08000637   Thumb Code     8  mygpio.o(i.MyGPIO_Reset)
+    MyGPIO_Set                               0x0800063f   Thumb Code     8  mygpio.o(i.MyGPIO_Set)
+    MyTimer_Active_IT                        0x08000649   Thumb Code   160  mytimer.o(i.MyTimer_Active_IT)
+    MyTimer_Base_Init                        0x0800070d   Thumb Code    86  mytimer.o(i.MyTimer_Base_Init)
+    MyTimer_Base_Start                       0x08000775   Thumb Code    10  mytimer.o(i.MyTimer_Base_Start)
+    MyTimer_PWM                              0x0800077f   Thumb Code    90  mytimer.o(i.MyTimer_PWM)
+    MyUsart_Active_IT                        0x080007d9   Thumb Code   140  mycontroldriver.o(i.MyUsart_Active_IT)
+    MyUsart_Base_Init                        0x0800087d   Thumb Code   150  mycontroldriver.o(i.MyUsart_Base_Init)
+    Set_Cycle                                0x08000a11   Thumb Code    56  mytimer.o(i.Set_Cycle)
+    SystemInit                               0x08000a49   Thumb Code    78  system_stm32f10x.o(i.SystemInit)
+    TIM1_UP_IRQHandler                       0x08000aa9   Thumb Code    28  mytimer.o(i.TIM1_UP_IRQHandler)
+    TIM2_IRQHandler                          0x08000acd   Thumb Code    32  mytimer.o(i.TIM2_IRQHandler)
+    TIM3_IRQHandler                          0x08000af1   Thumb Code    28  mytimer.o(i.TIM3_IRQHandler)
+    TIM4_IRQHandler                          0x08000b15   Thumb Code    28  mytimer.o(i.TIM4_IRQHandler)
+    USART1_IRQHandler                        0x08000b39   Thumb Code    28  mycontroldriver.o(i.USART1_IRQHandler)
+    USART3_IRQHandler                        0x08000b5d   Thumb Code    28  mycontroldriver.o(i.USART3_IRQHandler)
+    __scatterload_copy                       0x08000b81   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08000b8f   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08000b91   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    bordage                                  0x08000ba1   Thumb Code   134  bordage.o(i.bordage)
+    callBack_Batterie                        0x08000c51   Thumb Code    14  nivbatterie.o(i.callBack_Batterie)
+    getPuissance                             0x08000c69   Thumb Code    12  mycontroldriver.o(i.getPuissance)
+    handler                                  0x08000c7d   Thumb Code    40  principal.o(i.handler)
+    init_bordage                             0x08000ca9   Thumb Code    60  bordage.o(i.init_bordage)
+    main                                     0x08000ced   Thumb Code    72  principal.o(i.main)
+    niveauBatterie                           0x08000d49   Thumb Code    12  nivbatterie.o(i.niveauBatterie)
+    orientation                              0x08000d59   Thumb Code   116  orientationvent.o(i.orientation)
+    setPuissance                             0x08000dd5   Thumb Code    70  mycontroldriver.o(i.setPuissance)
+    Region$$Table$$Base                      0x08000e24   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08000e44   Number         0  anon$$obj.o(Region$$Table)
+    cpt                                      0x20000000   Data           4  principal.o(.data)
+    Timer1_Interrupt                         0x20000004   Data           4  mytimer.o(.data)
+    Timer2_Interrupt                         0x20000008   Data           4  mytimer.o(.data)
+    Timer3_Interrupt                         0x2000000c   Data           4  mytimer.o(.data)
+    Timer4_Interrupt                         0x20000010   Data           4  mytimer.o(.data)
+    alpha                                    0x20000014   Data           4  bordage.o(.data)
+    alpha1                                   0x20000018   Data           4  bordage.o(.data)
+    angle_voiles                             0x2000001c   Data           4  bordage.o(.data)
+    res                                      0x20000020   Data           4  nivbatterie.o(.data)
+    puissance                                0x20000024   Data           1  mycontroldriver.o(.data)
+    Usart1_Interrupt                         0x20000028   Data           4  mycontroldriver.o(.data)
+    Usart3_Interrupt                         0x2000002c   Data           4  mycontroldriver.o(.data)
+    __initial_sp                             0x20000430   Data           0  startup_stm32f10x_md.o(STACK)
 
 
 
@@ -339,65 +407,86 @@ Memory Map of the image
 
   Image Entry point : 0x080000ed
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000a54, Max: 0x00020000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000e74, Max: 0x00020000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000a38, Max: 0x00020000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000e44, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x000000ec   Data   RO          308    RESET               startup_stm32f10x_md.o
-    0x080000ec   0x080000ec   0x00000000   Code   RO          359  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080000ec   0x080000ec   0x00000004   Code   RO          370    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x080000f0   0x080000f0   0x00000004   Code   RO          373    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO          375    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO          377    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080000f4   0x080000f4   0x00000008   Code   RO          378    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080000fc   0x080000fc   0x00000004   Code   RO          385    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
-    0x08000100   0x08000100   0x00000000   Code   RO          380    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
-    0x08000100   0x08000100   0x00000000   Code   RO          382    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
-    0x08000100   0x08000100   0x00000004   Code   RO          371    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x08000104   0x08000104   0x00000024   Code   RO          309    .text               startup_stm32f10x_md.o
-    0x08000128   0x08000128   0x0000014e   Code   RO          362    .text               mf_w.l(dadd.o)
-    0x08000276   0x08000276   0x000000e4   Code   RO          364    .text               mf_w.l(dmul.o)
-    0x0800035a   0x0800035a   0x00000022   Code   RO          366    .text               mf_w.l(dflti.o)
-    0x0800037c   0x0800037c   0x0000003e   Code   RO          368    .text               mf_w.l(dfixi.o)
-    0x080003ba   0x080003ba   0x0000001e   Code   RO          386    .text               mc_w.l(llshl.o)
-    0x080003d8   0x080003d8   0x00000020   Code   RO          388    .text               mc_w.l(llushr.o)
-    0x080003f8   0x080003f8   0x00000024   Code   RO          390    .text               mc_w.l(llsshr.o)
-    0x0800041c   0x0800041c   0x00000000   Code   RO          392    .text               mc_w.l(iusefp.o)
-    0x0800041c   0x0800041c   0x000000ba   Code   RO          393    .text               mf_w.l(depilogue.o)
+    0x08000000   0x08000000   0x000000ec   Data   RO          417    RESET               startup_stm32f10x_md.o
+    0x080000ec   0x080000ec   0x00000000   Code   RO          468  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080000ec   0x080000ec   0x00000004   Code   RO          479    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080000f0   0x080000f0   0x00000004   Code   RO          482    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO          484    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO          486    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080000f4   0x080000f4   0x00000008   Code   RO          487    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080000fc   0x080000fc   0x00000004   Code   RO          494    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
+    0x08000100   0x08000100   0x00000000   Code   RO          489    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
+    0x08000100   0x08000100   0x00000000   Code   RO          491    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
+    0x08000100   0x08000100   0x00000004   Code   RO          480    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000104   0x08000104   0x00000024   Code   RO          418    .text               startup_stm32f10x_md.o
+    0x08000128   0x08000128   0x0000014e   Code   RO          471    .text               mf_w.l(dadd.o)
+    0x08000276   0x08000276   0x000000e4   Code   RO          473    .text               mf_w.l(dmul.o)
+    0x0800035a   0x0800035a   0x00000022   Code   RO          475    .text               mf_w.l(dflti.o)
+    0x0800037c   0x0800037c   0x0000003e   Code   RO          477    .text               mf_w.l(dfixi.o)
+    0x080003ba   0x080003ba   0x0000001e   Code   RO          495    .text               mc_w.l(llshl.o)
+    0x080003d8   0x080003d8   0x00000020   Code   RO          497    .text               mc_w.l(llushr.o)
+    0x080003f8   0x080003f8   0x00000024   Code   RO          499    .text               mc_w.l(llsshr.o)
+    0x0800041c   0x0800041c   0x00000000   Code   RO          501    .text               mc_w.l(iusefp.o)
+    0x0800041c   0x0800041c   0x000000ba   Code   RO          502    .text               mf_w.l(depilogue.o)
     0x080004d6   0x080004d6   0x00000002   PAD
-    0x080004d8   0x080004d8   0x00000024   Code   RO          395    .text               mc_w.l(init.o)
-    0x080004fc   0x080004fc   0x00000014   Code   RO          165    i.ADC1_2_IRQHandler  myadc.o
-    0x08000510   0x08000510   0x000000d0   Code   RO            4    i.MyGPIO_Init       mygpio.o
-    0x080005e0   0x080005e0   0x00000068   Code   RO           85    i.MyTimer_Base_Init  mytimer.o
-    0x08000648   0x08000648   0x0000000a   Code   RO           86    i.MyTimer_Base_Start  mytimer.o
-    0x08000652   0x08000652   0x0000005a   Code   RO           88    i.MyTimer_PWM       mytimer.o
-    0x080006ac   0x080006ac   0x00000008   Code   RO          316    i.SetSysClock       system_stm32f10x.o
-    0x080006b4   0x080006b4   0x000000e0   Code   RO          317    i.SetSysClockTo72   system_stm32f10x.o
-    0x08000794   0x08000794   0x00000038   Code   RO           89    i.Set_Cycle         mytimer.o
-    0x080007cc   0x080007cc   0x00000060   Code   RO          319    i.SystemInit        system_stm32f10x.o
-    0x0800082c   0x0800082c   0x00000024   Code   RO           90    i.TIM1_UP_IRQHandler  mytimer.o
-    0x08000850   0x08000850   0x00000024   Code   RO           91    i.TIM2_IRQHandler   mytimer.o
-    0x08000874   0x08000874   0x00000024   Code   RO           92    i.TIM3_IRQHandler   mytimer.o
-    0x08000898   0x08000898   0x00000024   Code   RO           93    i.TIM4_IRQHandler   mytimer.o
-    0x080008bc   0x080008bc   0x0000000e   Code   RO          399    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x080008ca   0x080008ca   0x00000002   Code   RO          400    i.__scatterload_null  mc_w.l(handlers.o)
-    0x080008cc   0x080008cc   0x0000000e   Code   RO          401    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x080008da   0x080008da   0x00000002   PAD
-    0x080008dc   0x080008dc   0x000000e4   Code   RO          240    i.main              bordage.o
-    0x080009c0   0x080009c0   0x00000058   Code   RO          213    i.orientation       orientationvent.o
-    0x08000a18   0x08000a18   0x00000020   Data   RO          397    Region$$Table       anon$$obj.o
+    0x080004d8   0x080004d8   0x00000024   Code   RO          504    .text               mc_w.l(init.o)
+    0x080004fc   0x080004fc   0x00000014   Code   RO          219    i.ADC1_2_IRQHandler  myadc.o
+    0x08000510   0x08000510   0x0000000e   Code   RO          220    i.ConvertChannel    myadc.o
+    0x0800051e   0x0800051e   0x00000002   PAD
+    0x08000520   0x08000520   0x0000002c   Code   RO          222    i.MyADC_Init        myadc.o
+    0x0800054c   0x0800054c   0x000000d0   Code   RO           87    i.MyGPIO_Init       mygpio.o
+    0x0800061c   0x0800061c   0x0000001a   Code   RO           88    i.MyGPIO_Read       mygpio.o
+    0x08000636   0x08000636   0x00000008   Code   RO           89    i.MyGPIO_Reset      mygpio.o
+    0x0800063e   0x0800063e   0x00000008   Code   RO           90    i.MyGPIO_Set        mygpio.o
+    0x08000646   0x08000646   0x00000002   PAD
+    0x08000648   0x08000648   0x000000c4   Code   RO          138    i.MyTimer_Active_IT  mytimer.o
+    0x0800070c   0x0800070c   0x00000068   Code   RO          139    i.MyTimer_Base_Init  mytimer.o
+    0x08000774   0x08000774   0x0000000a   Code   RO          140    i.MyTimer_Base_Start  mytimer.o
+    0x0800077e   0x0800077e   0x0000005a   Code   RO          142    i.MyTimer_PWM       mytimer.o
+    0x080007d8   0x080007d8   0x000000a4   Code   RO          354    i.MyUsart_Active_IT  mycontroldriver.o
+    0x0800087c   0x0800087c   0x000000ac   Code   RO          355    i.MyUsart_Base_Init  mycontroldriver.o
+    0x08000928   0x08000928   0x00000008   Code   RO          425    i.SetSysClock       system_stm32f10x.o
+    0x08000930   0x08000930   0x000000e0   Code   RO          426    i.SetSysClockTo72   system_stm32f10x.o
+    0x08000a10   0x08000a10   0x00000038   Code   RO          143    i.Set_Cycle         mytimer.o
+    0x08000a48   0x08000a48   0x00000060   Code   RO          428    i.SystemInit        system_stm32f10x.o
+    0x08000aa8   0x08000aa8   0x00000024   Code   RO          144    i.TIM1_UP_IRQHandler  mytimer.o
+    0x08000acc   0x08000acc   0x00000024   Code   RO          145    i.TIM2_IRQHandler   mytimer.o
+    0x08000af0   0x08000af0   0x00000024   Code   RO          146    i.TIM3_IRQHandler   mytimer.o
+    0x08000b14   0x08000b14   0x00000024   Code   RO          147    i.TIM4_IRQHandler   mytimer.o
+    0x08000b38   0x08000b38   0x00000024   Code   RO          356    i.USART1_IRQHandler  mycontroldriver.o
+    0x08000b5c   0x08000b5c   0x00000024   Code   RO          357    i.USART3_IRQHandler  mycontroldriver.o
+    0x08000b80   0x08000b80   0x0000000e   Code   RO          508    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08000b8e   0x08000b8e   0x00000002   Code   RO          509    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08000b90   0x08000b90   0x0000000e   Code   RO          510    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08000b9e   0x08000b9e   0x00000002   PAD
+    0x08000ba0   0x08000ba0   0x000000b0   Code   RO          288    i.bordage           bordage.o
+    0x08000c50   0x08000c50   0x00000018   Code   RO          321    i.callBack_Batterie  nivbatterie.o
+    0x08000c68   0x08000c68   0x00000014   Code   RO          358    i.getPuissance      mycontroldriver.o
+    0x08000c7c   0x08000c7c   0x0000002c   Code   RO            4    i.handler           principal.o
+    0x08000ca8   0x08000ca8   0x00000044   Code   RO          289    i.init_bordage      bordage.o
+    0x08000cec   0x08000cec   0x0000005c   Code   RO            5    i.main              principal.o
+    0x08000d48   0x08000d48   0x00000010   Code   RO          322    i.niveauBatterie    nivbatterie.o
+    0x08000d58   0x08000d58   0x0000007c   Code   RO          264    i.orientation       orientationvent.o
+    0x08000dd4   0x08000dd4   0x00000050   Code   RO          359    i.setPuissance      mycontroldriver.o
+    0x08000e24   0x08000e24   0x00000020   Data   RO          506    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000a38, Size: 0x00000420, Max: 0x00005000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000e44, Size: 0x00000430, Max: 0x00005000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08000a38   0x00000010   Data   RW           94    .data               mytimer.o
-    0x20000010   0x08000a48   0x0000000c   Data   RW          241    .data               bordage.o
-    0x2000001c   0x08000a54   0x00000004   PAD
-    0x20000020        -       0x00000400   Zero   RW          306    STACK               startup_stm32f10x_md.o
+    0x20000000   0x08000e44   0x00000004   Data   RW            6    .data               principal.o
+    0x20000004   0x08000e48   0x00000010   Data   RW          148    .data               mytimer.o
+    0x20000014   0x08000e58   0x0000000c   Data   RW          290    .data               bordage.o
+    0x20000020   0x08000e64   0x00000004   Data   RW          323    .data               nivbatterie.o
+    0x20000024   0x08000e68   0x0000000c   Data   RW          360    .data               mycontroldriver.o
+    0x20000030        -       0x00000400   Zero   RW          415    STACK               startup_stm32f10x_md.o
 
 
 ==============================================================================
@@ -407,18 +496,21 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       228         46          0         12          0        835   bordage.o
-        20          6          0          0          0        384   myadc.o
-       208         22          0          0          0     207450   mygpio.o
-       404         46          0         16          0       5052   mytimer.o
-        88          4          0          0          0        502   orientationvent.o
+       244         50          0         12          0       1197   bordage.o
+        78         12          0          0          0       1670   myadc.o
+       508         80          0         12          0       3932   mycontroldriver.o
+       250         22          0          0          0       2652   mygpio.o
+       600         82          0         16          0       5708   mytimer.o
+        40         14          0          4          0       1139   nivbatterie.o
+       124          8          0          0          0        518   orientationvent.o
+       136         24          0          4          0     207527   principal.o
         36          8        236          0       1024        808   startup_stm32f10x_md.o
        328         28          0          0          0       1965   system_stm32f10x.o
 
     ----------------------------------------------------------------------
-      1312        160        268         28       1028     216996   Object Totals
+      2348        328        268         48       1024     227116   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-         0          0          0          0          4          0   (incl. Padding)
+         4          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -466,15 +558,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      2348        176        268         28       1028     216956   Grand Totals
-      2348        176        268         28       1028     216956   ELF Image Totals
-      2348        176        268         28          0          0   ROM Totals
+      3384        344        268         48       1024     226192   Grand Totals
+      3384        344        268         48       1024     226192   ELF Image Totals
+      3384        344        268         48          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 2616 (   2.55kB)
-    Total RW  Size (RW Data + ZI Data)              1056 (   1.03kB)
-    Total ROM Size (Code + RO Data + RW Data)       2644 (   2.58kB)
+    Total RO  Size (Code + RO Data)                 3652 (   3.57kB)
+    Total RW  Size (RW Data + ZI Data)              1072 (   1.05kB)
+    Total ROM Size (Code + RO Data + RW Data)       3700 (   3.61kB)
 
 ==============================================================================
 

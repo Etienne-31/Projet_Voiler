@@ -9,3 +9,4 @@
 .\objects\nivbatterie.o: C:\Programdata\Keil\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h
 .\objects\nivbatterie.o: ..\MesDrivers\Include\myADC.h
 .\objects\nivbatterie.o: ..\MesDrivers\Include\nivBatterie.h
+.\objects\nivbatterie.o: ..\MesDrivers\Include\myTimer.h

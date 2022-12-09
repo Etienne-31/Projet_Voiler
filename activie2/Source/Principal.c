@@ -1,37 +1,58 @@
 #include "stm32f10x.h"
-#include "myGPIO.h"
+#include "myADC.h" 
+#include "nivBatterie.h" 
+#include "Bordage.h" 
+#include "OrientationVent.h" 
+#include "mycontroldriver.h" 
+#include "myGPIO.h" 
 #include "myTimer.h"
-#include "myADC.h"
-#define VALOUT 2
 
-int result ;
+int cpt=0;
 
-void CallBack(){
-	//MyGPIO_Toggle(GPIOA,5);
-	result = ConvertChannel(ADC1,3) ;
+void handler(void){
+	
+	bordage(); //orientation vent + bordage
+	
+	if (cpt == 10){ //Batterie
+		callBack_Batterie();
+		cpt = 0;		
+	}
+	
+	setPuissance(); //USART
+	
+	cpt++; //compteur
 }
 
-int main ( void )
-{
 
-	MyGPIO_Init(GPIOA,VALOUT,5);
-	MyTimer_Base_Init(TIM2,0x6000,0x6000);
-	MyTimer_Base_Start(TIM2);
-	RCC->CFGR |= (10<<14);
-	MyTimer_Active_IT ( TIM2 , 1,CallBack );
-	MyADC_Init(ADC1,3);
+int main ( void ){
+	unsigned short PSC= 0;	  
+	unsigned short ARR= (72*1000000)/(5*(PSC+1))-1; //FREQUENCE a 200 ms	
 	
 	
-/*	MyGPIO_Init(GPIOA,0,7);
-	MyTimer_Base_Init(TIM2,0x6000,0x6000);
-	MyTimer_Base_Start(TIM2);
-	MyTimer_PWM(  TIM2 , 1 );
-	Set_Cycle(TIM2,1,50);*/
+	/*
+	*USART
+	*/
+	MyUsart_Base_Init(USART3) ;
+	MyUsart_Active_IT(USART3 , 1, getPuissance);
 	
+	/*
+	* BATTERIE
+	*/
+	niveauBatterie();
+	
+	/*
+	* BORDAGE
+	*/
+	init_bordage();
+	
+	/*
+	* ORDRDONNANCEUR
+	*/
 
-				do
-				{
-					
-				}while(1);
-			}
-
+	MyTimer_Base_Init (TIM1, ARR, PSC);
+	MyTimer_Base_Start(TIM1);
+	MyTimer_Active_IT(TIM1,3,handler);
+	
+	do {}while(1);
+}
+		
