@@ -11,18 +11,22 @@ void(*Usart1_Interrupt)(void) = 0;
 void(*Usart3_Interrupt)(void) = 0;
 
 void MyUsart_Base_Init ( USART_TypeDef*Usart) {
-	MyGPIO_Init(GPIOB, 11,1);//  USART  input pull up // Pourquoi cette pin la ?
+	MyGPIO_Init(GPIOB, 11,In_Floating);//  USART  input floating 
 	if (Usart==USART3){
 		RCC->APB1ENR |=  RCC_APB1ENR_USART3EN ;//(1<<18);
 		USART3->CR1 = 0x00; // On reset tous les bit de CR1 à 0 pour "réinitialier" le registre
 		USART3->CR1 |= (1<<13); //UE=1 ENABLE l'USART via le 13eme bit du registre CR1
 		USART3->BRR = (234<<4) + (6<<0);// mantisse 234 et fraction 6 -> 9600 = ( 36MHz ) / ( 16* Mantisse ) -> Mantisse = (36 000 000)/(9600*16) = 234.375 -> x/16 = 0.375 -> x = 6 
 		USART3->CR1 |= (1<<2); // RE=1 on ENABLE la reception de l'USART qui commence alors à chercher un bit de commencement
+		
+		
+		
 	} else if (Usart==USART1){
 		RCC->APB1ENR |=  RCC_APB2ENR_USART1EN ;//(1<<18);
 		USART1->CR1 = 0x00; //clear all
 		USART1->CR1 |= (1<<13); //UE=1 enable usart
 		USART1->BRR = (227<<4) | (14<<0);// mantisse 227 et fraction 14 
+		
 		USART1->CR1 |= (1<<2); // RE=1 enable receiver 
 	}
 	
@@ -34,7 +38,7 @@ void MyUsart_Base_Init ( USART_TypeDef*Usart) {
 }
 
 void MyUsart_Active_IT ( USART_TypeDef*Usart , char Prio,void(*Fonction_IT)(void) ){
-	unsigned short PSC = 0;	  
+	unsigned short PSC = 4;	  
 	unsigned short ARR = (72*10)/(PSC+1)-1; //FREQUENCE a 20kHZ
 	MyTimer_Base_Init (TIM2, ARR, PSC);
 	MyTimer_Base_Start(TIM2);

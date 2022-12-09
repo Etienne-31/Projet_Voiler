@@ -4,9 +4,10 @@
 #include "myGPIO.h"
  
 	
-	int alpha;  
-	int alpha1;  
-	int angle_voiles; 
+	float alpha;  
+	float alpha1;  
+	float angle_voiles;  
+	float pourcentage_pwm;
 	
 void init_bordage() {
 	//Configuration du TIM4
@@ -29,14 +30,20 @@ void bordage(void) {
 	MyGPIO_Init ( GPIOB , 8, AltOut_Ppull);
 	
 	
-	while(1) {
 		alpha= TIM3->CNT;   
-		alpha1= (alpha/2);  
-		if ((alpha1 <45) || ((alpha1 >(180-45))&& (alpha1< (180+45))) || (alpha1>315))  { 
-			angle_voiles=5;
-		} else { 
-			angle_voiles= alpha1*0.037+3.34;
+		alpha1= (alpha/2.);    
+		if (alpha1 < 45.0 || alpha1 > 315.){
+			angle_voiles = 0.0;
 		}
-		Set_Cycle(TIM4 ,3, (char)angle_voiles);  
-	}
+		else if (alpha1 <= 180.){
+			angle_voiles = (90.0/135.0)*(alpha1-45.0);
+		}
+		else {
+			angle_voiles = (90.0/135.0)*(360.-alpha1-45.0);
+		}
+		
+		pourcentage_pwm = (1.0/18.0)*angle_voiles+5.0;
+		
+		Set_Cycle(TIM4 ,3, (char)pourcentage_pwm);  
+	
 }

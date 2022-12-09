@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\Objects\activiteun_Simu.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\activiteun_Simu.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Fri Dec 09 16:29:13 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Fri Dec 09 19:00:16 2022
 <BR><P>
-<H3>Maximum Stack Usage =         96 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        136 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-handler &rArr; bordage &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
+handler &rArr; bordage &rArr; __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 <P>
 <H3>
 Mutually Recursive functions
@@ -92,27 +92,27 @@ Global Symbols
 <P><STRONG><a name="[37]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(.text)
 </UL>
-<P><STRONG><a name="[5d]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[65]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[3a]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[47]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<P><STRONG><a name="[4b]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[5e]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[66]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[5f]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[67]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[60]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[68]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[61]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
+<P><STRONG><a name="[69]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
 
-<P><STRONG><a name="[62]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[6a]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
 
-<P><STRONG><a name="[63]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
+<P><STRONG><a name="[6b]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f10x_md.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
@@ -300,17 +300,25 @@ Global Symbols
 <LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 <LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
-<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
+<BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
+<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
 </UL>
 
-<P><STRONG><a name="[41]"></a>__aeabi_dsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<P><STRONG><a name="[41]"></a>__aeabi_dsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
 </UL>
 
-<P><STRONG><a name="[42]"></a>__aeabi_drsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<P><STRONG><a name="[42]"></a>__aeabi_drsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
 </UL>
 
 <P><STRONG><a name="[43]"></a>__aeabi_dmul</STRONG> (Thumb, 228 bytes, Stack size 48 bytes, dmul.o(.text))
@@ -318,23 +326,60 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
+<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
 </UL>
 
-<P><STRONG><a name="[44]"></a>__aeabi_i2d</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, dflti.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = __aeabi_i2d &rArr; _double_epilogue &rArr; _double_round
+<P><STRONG><a name="[44]"></a>__aeabi_ddiv</STRONG> (Thumb, 222 bytes, Stack size 32 bytes, ddiv.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = __aeabi_ddiv &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<BR>[Calls]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;callBack_Batterie
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
 </UL>
 
-<P><STRONG><a name="[45]"></a>__aeabi_d2iz</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, dfixi.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_d2iz
+<P><STRONG><a name="[45]"></a>__aeabi_i2f</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, fflti.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __aeabi_i2f &rArr; _float_epilogue
 </UL>
-<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;callBack_Batterie
+</UL>
+
+<P><STRONG><a name="[47]"></a>__aeabi_ui2f</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, ffltui.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __aeabi_ui2f &rArr; _float_epilogue
+</UL>
+<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_epilogue
+</UL>
+<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
+</UL>
+
+<P><STRONG><a name="[58]"></a>__aeabi_f2uiz</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, ffixui.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
+</UL>
+
+<P><STRONG><a name="[55]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;callBack_Batterie
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
+</UL>
+
+<P><STRONG><a name="[6c]"></a>__aeabi_cdcmpeq</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, cdcmple.o(.text), UNUSED)
+
+<P><STRONG><a name="[56]"></a>__aeabi_cdcmple</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, cdcmple.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
+</UL>
+
+<P><STRONG><a name="[57]"></a>__aeabi_cdrcmple</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, cdrcmple.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
+</UL>
+
+<P><STRONG><a name="[48]"></a>__aeabi_d2f</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, d2f.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_d2f
+</UL>
+<BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_round
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;callBack_Batterie
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
 </UL>
 
 <P><STRONG><a name="[3d]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text))
@@ -342,137 +387,148 @@ Global Symbols
 <LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[64]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
-
-<P><STRONG><a name="[46]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
-</UL>
-
-<P><STRONG><a name="[65]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+<P><STRONG><a name="[6d]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 
 <P><STRONG><a name="[3e]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[66]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
+<P><STRONG><a name="[6e]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
 
-<P><STRONG><a name="[67]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, iusefp.o(.text), UNUSED)
+<P><STRONG><a name="[6f]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, iusefp.o(.text), UNUSED)
+
+<P><STRONG><a name="[49]"></a>_float_round</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, fepilogue.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
+</UL>
+
+<P><STRONG><a name="[46]"></a>_float_epilogue</STRONG> (Thumb, 92 bytes, Stack size 4 bytes, fepilogue.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = _float_epilogue
+</UL>
+<BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
+</UL>
 
 <P><STRONG><a name="[40]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _double_round
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
 <P><STRONG><a name="[3f]"></a>_double_epilogue</STRONG> (Thumb, 156 bytes, Stack size 32 bytes, depilogue.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 <LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 <LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
-<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
 <P><STRONG><a name="[3b]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+<BR><BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[68]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[70]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+
+<P><STRONG><a name="[4a]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+</UL>
+
+<P><STRONG><a name="[71]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
 <P><STRONG><a name="[1c]"></a>ADC1_2_IRQHandler</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, myadc.o(i.ADC1_2_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[53]"></a>ConvertChannel</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, myadc.o(i.ConvertChannel))
-<BR><BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;callBack_Batterie
+<P><STRONG><a name="[5b]"></a>ConvertChannel</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, myadc.o(i.ConvertChannel))
+<BR><BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;callBack_Batterie
 </UL>
 
-<P><STRONG><a name="[59]"></a>MyADC_Init</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, myadc.o(i.MyADC_Init))
-<BR><BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;niveauBatterie
+<P><STRONG><a name="[61]"></a>MyADC_Init</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, myadc.o(i.MyADC_Init))
+<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;niveauBatterie
 </UL>
 
-<P><STRONG><a name="[4d]"></a>MyGPIO_Init</STRONG> (Thumb, 186 bytes, Stack size 12 bytes, mygpio.o(i.MyGPIO_Init))
+<P><STRONG><a name="[51]"></a>MyGPIO_Init</STRONG> (Thumb, 186 bytes, Stack size 12 bytes, mygpio.o(i.MyGPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = MyGPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;orientation
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
-<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUsart_Base_Init
+<BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;orientation
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;niveauBatterie
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUsart_Base_Init
 </UL>
 
-<P><STRONG><a name="[5a]"></a>MyGPIO_Read</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, mygpio.o(i.MyGPIO_Read))
-<BR><BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;orientation
+<P><STRONG><a name="[62]"></a>MyGPIO_Read</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, mygpio.o(i.MyGPIO_Read))
+<BR><BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;orientation
 </UL>
 
-<P><STRONG><a name="[5c]"></a>MyGPIO_Reset</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, mygpio.o(i.MyGPIO_Reset))
-<BR><BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setPuissance
+<P><STRONG><a name="[64]"></a>MyGPIO_Reset</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, mygpio.o(i.MyGPIO_Reset))
+<BR><BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setPuissance
 </UL>
 
-<P><STRONG><a name="[5b]"></a>MyGPIO_Set</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, mygpio.o(i.MyGPIO_Set))
-<BR><BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setPuissance
+<P><STRONG><a name="[63]"></a>MyGPIO_Set</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, mygpio.o(i.MyGPIO_Set))
+<BR><BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setPuissance
 </UL>
 
-<P><STRONG><a name="[58]"></a>MyTimer_Active_IT</STRONG> (Thumb, 160 bytes, Stack size 8 bytes, mytimer.o(i.MyTimer_Active_IT))
+<P><STRONG><a name="[60]"></a>MyTimer_Active_IT</STRONG> (Thumb, 160 bytes, Stack size 8 bytes, mytimer.o(i.MyTimer_Active_IT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = MyTimer_Active_IT
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[49]"></a>MyTimer_Base_Init</STRONG> (Thumb, 86 bytes, Stack size 8 bytes, mytimer.o(i.MyTimer_Base_Init))
+<P><STRONG><a name="[4d]"></a>MyTimer_Base_Init</STRONG> (Thumb, 86 bytes, Stack size 8 bytes, mytimer.o(i.MyTimer_Base_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = MyTimer_Base_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;orientation
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_bordage
-<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUsart_Active_IT
+<BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;orientation
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_bordage
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUsart_Active_IT
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[4a]"></a>MyTimer_Base_Start</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, mytimer.o(i.MyTimer_Base_Start))
-<BR><BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;orientation
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_bordage
-<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUsart_Active_IT
+<P><STRONG><a name="[4e]"></a>MyTimer_Base_Start</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, mytimer.o(i.MyTimer_Base_Start))
+<BR><BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;orientation
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_bordage
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUsart_Active_IT
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[4b]"></a>MyTimer_PWM</STRONG> (Thumb, 90 bytes, Stack size 0 bytes, mytimer.o(i.MyTimer_PWM))
-<BR><BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
-<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUsart_Active_IT
+<P><STRONG><a name="[4f]"></a>MyTimer_PWM</STRONG> (Thumb, 90 bytes, Stack size 0 bytes, mytimer.o(i.MyTimer_PWM))
+<BR><BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUsart_Active_IT
 </UL>
 
-<P><STRONG><a name="[48]"></a>MyUsart_Active_IT</STRONG> (Thumb, 140 bytes, Stack size 24 bytes, mycontroldriver.o(i.MyUsart_Active_IT))
+<P><STRONG><a name="[4c]"></a>MyUsart_Active_IT</STRONG> (Thumb, 136 bytes, Stack size 24 bytes, mycontroldriver.o(i.MyUsart_Active_IT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = MyUsart_Active_IT &rArr; MyTimer_Base_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Start
-<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Init
+<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Start
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[4c]"></a>MyUsart_Base_Init</STRONG> (Thumb, 150 bytes, Stack size 8 bytes, mycontroldriver.o(i.MyUsart_Base_Init))
+<P><STRONG><a name="[50]"></a>MyUsart_Base_Init</STRONG> (Thumb, 150 bytes, Stack size 8 bytes, mycontroldriver.o(i.MyUsart_Base_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = MyUsart_Base_Init &rArr; MyGPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Init
+<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[51]"></a>Set_Cycle</STRONG> (Thumb, 56 bytes, Stack size 12 bytes, mytimer.o(i.Set_Cycle))
+<P><STRONG><a name="[59]"></a>Set_Cycle</STRONG> (Thumb, 56 bytes, Stack size 12 bytes, mytimer.o(i.Set_Cycle))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = Set_Cycle
 </UL>
-<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setPuissance
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
+<BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setPuissance
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
 </UL>
 
 <P><STRONG><a name="[36]"></a>SystemInit</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, system_stm32f10x.o(i.SystemInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = SystemInit &rArr; SetSysClock &rArr; SetSysClockTo72
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(.text)
 </UL>
@@ -506,30 +562,41 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[69]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[72]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[6a]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[73]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[6b]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[74]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[50]"></a>bordage</STRONG> (Thumb, 134 bytes, Stack size 0 bytes, bordage.o(i.bordage))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = bordage &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
+<P><STRONG><a name="[54]"></a>bordage</STRONG> (Thumb, 286 bytes, Stack size 40 bytes, bordage.o(i.bordage))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = bordage &rArr; __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
+<BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2uiz
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
+<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_Cycle
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Init
+<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdcmple
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_Cycle
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_PWM
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handler
 </UL>
 
-<P><STRONG><a name="[52]"></a>callBack_Batterie</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, nivbatterie.o(i.callBack_Batterie))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = callBack_Batterie
+<P><STRONG><a name="[5a]"></a>callBack_Batterie</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, nivbatterie.o(i.callBack_Batterie))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = callBack_Batterie &rArr; __aeabi_ddiv &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertChannel
+<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertChannel
 </UL>
 <BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handler
 </UL>
@@ -538,20 +605,20 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> principal.o(i.main)
 </UL>
 <P><STRONG><a name="[39]"></a>handler</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, principal.o(i.handler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = handler &rArr; bordage &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
+<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = handler &rArr; bordage &rArr; __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setPuissance
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;callBack_Batterie
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
+<BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setPuissance
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;callBack_Batterie
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bordage
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> principal.o(i.main)
 </UL>
-<P><STRONG><a name="[55]"></a>init_bordage</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, bordage.o(i.init_bordage))
+<P><STRONG><a name="[5d]"></a>init_bordage</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, bordage.o(i.init_bordage))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = init_bordage &rArr; orientation &rArr; MyGPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;orientation
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Start
-<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Init
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;orientation
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Start
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -559,41 +626,42 @@ Global Symbols
 <P><STRONG><a name="[35]"></a>main</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, principal.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = main &rArr; init_bordage &rArr; orientation &rArr; MyGPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;niveauBatterie
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_bordage
-<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUsart_Base_Init
-<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUsart_Active_IT
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Start
-<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Init
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Active_IT
+<BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;niveauBatterie
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_bordage
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUsart_Base_Init
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUsart_Active_IT
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Start
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Init
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Active_IT
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[57]"></a>niveauBatterie</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, nivbatterie.o(i.niveauBatterie))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = niveauBatterie
+<P><STRONG><a name="[5f]"></a>niveauBatterie</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, nivbatterie.o(i.niveauBatterie))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = niveauBatterie &rArr; MyGPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyADC_Init
+<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyADC_Init
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[56]"></a>orientation</STRONG> (Thumb, 116 bytes, Stack size 16 bytes, orientationvent.o(i.orientation))
+<P><STRONG><a name="[5e]"></a>orientation</STRONG> (Thumb, 116 bytes, Stack size 16 bytes, orientationvent.o(i.orientation))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = orientation &rArr; MyGPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Read
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Init
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Start
-<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Init
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Read
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Init
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Start
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyTimer_Base_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_bordage
+<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_bordage
 </UL>
 
-<P><STRONG><a name="[54]"></a>setPuissance</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, mycontroldriver.o(i.setPuissance))
+<P><STRONG><a name="[5c]"></a>setPuissance</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, mycontroldriver.o(i.setPuissance))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = setPuissance &rArr; Set_Cycle
 </UL>
-<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_Cycle
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Set
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Reset
+<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_Cycle
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Set
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyGPIO_Reset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handler
 </UL>
@@ -601,18 +669,18 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[4e]"></a>SetSysClock</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_stm32f10x.o(i.SetSysClock))
+<P><STRONG><a name="[52]"></a>SetSysClock</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_stm32f10x.o(i.SetSysClock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = SetSysClock &rArr; SetSysClockTo72
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClockTo72
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClockTo72
 </UL>
 <BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>
 
-<P><STRONG><a name="[4f]"></a>SetSysClockTo72</STRONG> (Thumb, 214 bytes, Stack size 12 bytes, system_stm32f10x.o(i.SetSysClockTo72))
+<P><STRONG><a name="[53]"></a>SetSysClockTo72</STRONG> (Thumb, 214 bytes, Stack size 12 bytes, system_stm32f10x.o(i.SetSysClockTo72))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = SetSysClockTo72
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
 </UL>
 <P>
 <H3>

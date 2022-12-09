@@ -11,6 +11,9 @@ void MyADC_Init (ADC_TypeDef * ADC, char channel){
 	RCC->CFGR |=10<<14 ;
 	ADC->SQR3|= (channel<<0x0);
 	ADC->CR2 |= (0x1<<0);
+	ADC->CR2 |= (0x1<<2);
+	while(ADC->CR2 & (1<<2)){//Recalibration
+	}
 } 
 
 

@@ -10,3 +10,4 @@
 .\objects\nivbatterie.o: ..\MesDrivers\Include\myADC.h
 .\objects\nivbatterie.o: ..\MesDrivers\Include\nivBatterie.h
 .\objects\nivbatterie.o: ..\MesDrivers\Include\myTimer.h
+.\objects\nivbatterie.o: ..\MesDrivers\Include\myGPIO.h

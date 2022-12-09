@@ -13,7 +13,7 @@
 	//Configuration du Channel 
 	TIM3->CCMR1 |= 1<<0; //config A : channel 1 , sur TI 1. PA6 
 	TIM3->CCMR1 |= 1<<8; //config B : channel 2 , sur TI 2. PA7
-	TIM3->SMCR  |= 1<<0; // set SMS : encodeur 2 -> que les rises
+	TIM3->SMCR  |= 1<<1; // set SMS : encodeur 2 -> que les rises
 	//Enable clock
 	TIM3->CCER |= (1<<0);
  
