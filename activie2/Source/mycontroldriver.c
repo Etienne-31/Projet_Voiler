@@ -35,7 +35,9 @@ void MyUsart_Base_Init ( USART_TypeDef*Usart) {
 
 void MyUsart_Active_IT ( USART_TypeDef*Usart , char Prio,void(*Fonction_IT)(void) ){
 	unsigned short PSC = 0;	  
-	unsigned short ARR = (72*10)/(PSC+1)-1; //FREQUENCE a 20kHZ
+	unsigned short ARR = ((72*10^6)/((20*10^3)*(PSC+1)))-1; 
+	//On veut une fréquence de 20KHz pour le la pwm du timer 2 on on utilise la formule : (Fhorloge)/(Ftimer*(PSC+1))-1 = ARR 
+
 	MyTimer_Base_Init (TIM2, ARR, PSC);
 	MyTimer_Base_Start(TIM2);
 	MyTimer_PWM( TIM2, 1 );
@@ -49,7 +51,7 @@ void MyUsart_Active_IT ( USART_TypeDef*Usart , char Prio,void(*Fonction_IT)(void
 	} else if (Usart==USART1){
 		NVIC->ISER[1]|= 1<<5;
 		NVIC->IP[37] = Prio<<4;
-		Usart1_Interrupt = Fonction_IT;
+		Usart1_Interrupt = Fonction_IT; 
 	}
 }
 
@@ -71,7 +73,7 @@ void getPuissance(){ // Renomer en fonction lire USART  DATA REGISTER
 	puissance = USART3->DR; //read data contiens le pourcentage de puissance pour faire tourner le bateau via la pwm
 }
 
-void setPuissance () {
+void setPuissance (void) {
 	if(puissance<0){//sens du plateau
 			Set_Cycle(TIM2,1,abs(puissance) ); // On change ce bit pour connaitre le sens de rotation
 			MyGPIO_Set(GPIOA,8);

@@ -26,8 +26,8 @@ void handler(void){
 
 int main ( void ){
 	unsigned short PSC= 0;	  
-	unsigned short ARR= (72*1000000)/(5*(PSC+1))-1; //FREQUENCE a 200 ms	
-	
+	unsigned short ARR=   ((200*10^(-3))*(72*10^6)/(PSC+1))-1;   // ca c'est faux (72*1000000)/(5*(PSC+1))-1; //Periode a 200 ms ; Formule choisi avec Periode Timer = ((PSC+1)*(ARR+1))/Frequence Horloge
+	// Cet ARR doit être pour l'ordonnanceur, j'ai fais en sorte qu'ici la période du timer 1 utilisé ici ai une période de 200 ms
 	
 	/*
 	*USART

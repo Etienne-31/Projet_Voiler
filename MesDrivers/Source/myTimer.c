@@ -1,5 +1,5 @@
 #define MYTIMER_H
-#include "U:\4 IR\ProjetVoilier\Projet_Voilier\MesDrivers\Include\myGPIO.h"
+#include "myGPIO.h"
 #include "stm32f10x.h"
 typedef struct
 {
